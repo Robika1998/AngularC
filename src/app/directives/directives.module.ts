@@ -5,14 +5,13 @@ import { MyIfDirectiveDirective } from './directive/my-if-directive.directive';
 import { DirectivesRouting } from './directives-routings.module';
 import { DirectivesPageComponent } from './directives.component';
 
-
-
 @NgModule({
-  declarations: [DirectivesPageComponent, MyChangeColorDirectiveDirective, MyIfDirectiveDirective],
-  imports: [
-    CommonModule,
-    DirectivesRouting
+  declarations: [
+    DirectivesPageComponent,
+    MyChangeColorDirectiveDirective,
+    MyIfDirectiveDirective,
   ],
-  exports: []
+  imports: [CommonModule, DirectivesRouting],
+  exports: [],
 })
-export class DirectivesModule { }
+export class DirectivesModule {}

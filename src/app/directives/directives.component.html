@@ -5,3 +5,79 @@
 <br />
 
 <button (click)="isShow = !isShow">Click me!</button>
+
+<!-- ================================ -->
+<!-- <div *ngFor="let color of colors; 
+      let i = index; 
+      let first = first; 
+      let last = last">
+
+  <span>{{i}}. {{first ? "One" : ""}} {{last ? "OneOne" : ""}} {{color}}</span>
+</div> -->
+
+<!-- ===================================== -->
+
+<!-- @for (color of colors; track color; let i = $index; let first = $first; let last = $last) {
+    <div>
+        <span>{{i}}. {{first ? "One" : ""}} {{last ? "OneOne" : ""}} {{color}}</span>
+    </div>
+}
+@empty {
+    <span>NOOOOO</span>
+} -->
+
+<!-- =================================? -->
+
+<!-- <div *ngIf="isShow; else emptyState">
+    <span>{{isShow}} Me True</span>
+</div>
+<button (click)="isShow = !isShow">Click</button>
+
+<ng-template #emptyState>
+    <span>{{isShow}} Me False </span>
+</ng-template> -->
+
+<!-- =============================== -->
+<!-- @if(isShow) {
+    <span>{{isShow}} Me True</span>
+}
+@else {
+    <span>{{isShow}} Me False </span>
+}
+<button (click)="isShow = !isShow">Click</button> -->
+
+
+<!-- ============================================== -->
+
+<!-- @for (color of colors; track color; let i = $index; let first = $first; let last = $last) {
+    <div>
+        <button (click)="currentColor = color">{{color}}</button>
+    </div>
+}
+@empty {
+    <span>NOOOOO</span>
+}
+
+
+
+<div [ngSwitch]="currentColor">
+   <span *ngSwitchCase="'red'"> Redddd</span>
+   <span *ngSwitchCase="'blue'"> Blueee</span>
+</div> -->
+
+<!-- @switch  (currentColor) {
+    @case ('red') {
+        <span>reeeeeeedd</span>
+    } @default {
+    
+    }
+} -->
+
+
+<!-- =============================================? -->
+
+
+<!-- <span [ngStyle]="elementStyle">ffffffffffffff</span> -->
+
+<!-- <span [ngClass]="{ color: 'red', opacity: 0.5}">tgggttttttttttttgg</span> -->
+

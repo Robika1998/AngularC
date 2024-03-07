@@ -21,6 +21,14 @@ const routes: Routes = [
         loadChildren: () => import('./directives/directives.module').then((m) => m.DirectivesModule)
     },
     {
+        path: 'life-cycle',
+        loadChildren: () => import('./lifecycle/life-cycle.module').then((m) => m.LifeCycleModule)
+    },
+    {
+        path: 'requests',
+        loadChildren: () => import('./requests/request-module.module').then((m) => m.RequestModule)
+    },
+    {
         path: '**',
         component: myEmptyPage
     }
@@ -30,5 +38,5 @@ const routes: Routes = [
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
-  })
-  export class AppRoutingModule { }
+})
+export class AppRoutingModule { }

@@ -3,15 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-directives',
   templateUrl: './directives.component.html',
-  styleUrl: './directives.component.scss'
+  styleUrl: './directives.component.scss',
 })
 export class DirectivesPageComponent {
-
-  // ngFor
+  // ngFor     გავდივართ მასივთან ან ობიექტან
 
   public colors: string[] = ['red', 'blue', 'green', 'yellow'];
 
-  // ngIf
+  // ngIf          თუ არის თრუ მაშინ გამოიტანს ფოლსთან არა
 
   public isShow = true;
 
@@ -24,8 +23,7 @@ export class DirectivesPageComponent {
   public elementStyle: any = {
     color: 'red',
     opacity: 0.5,
-  }
+  };
 
   // ngClass
-
 }

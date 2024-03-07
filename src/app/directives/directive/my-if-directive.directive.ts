@@ -1,10 +1,15 @@
-import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+import {
+  Directive,
+  Input,
+  OnInit,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
 
 @Directive({
-  selector: '[myIf]'
+  selector: '[myIf]',
 })
 export class MyIfDirectiveDirective implements OnInit {
-
   private _show = false;
 
   @Input() set myIf(show: boolean) {
@@ -15,7 +20,7 @@ export class MyIfDirectiveDirective implements OnInit {
   constructor(
     private vcr: ViewContainerRef,
     private templateRef: TemplateRef<unknown>
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.displayTemplate();
@@ -27,5 +32,4 @@ export class MyIfDirectiveDirective implements OnInit {
       this.vcr.createEmbeddedView(this.templateRef);
     }
   }
-
 }

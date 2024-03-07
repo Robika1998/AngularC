@@ -1,11 +1,10 @@
 import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[myChangeColor]'
+  selector: '[myChangeColor]',
 })
 export class MyChangeColorDirectiveDirective implements AfterViewInit {
-
-  @Input('myChangeColor') colors?: string[]
+  @Input('myChangeColor') colors?: string[];
 
   private _el: ElementRef;
 
@@ -14,15 +13,15 @@ export class MyChangeColorDirectiveDirective implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.changeColor(this._el)
+    this.changeColor(this._el);
   }
 
   private changeColor(el: ElementRef) {
     if (this.colors && this.colors.length !== 0) {
       setInterval(() => {
-        el.nativeElement.style.color = this.colors![Math.floor(Math.random() * this.colors!.length)]
-      }, 300)
+        el.nativeElement.style.color =
+          this.colors![Math.floor(Math.random() * this.colors!.length)];
+      }, 300);
     }
   }
-
 }
