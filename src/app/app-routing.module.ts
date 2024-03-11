@@ -29,6 +29,14 @@ const routes: Routes = [
         loadChildren: () => import('./requests/request-module.module').then((m) => m.RequestModule)
     },
     {
+        path: 'pipes',
+        loadChildren: () => import('./pipes/pipes.module').then((m) => m.PipeModule)
+    },
+    {
+        path: 'forms',
+        loadChildren: () => import('./forms/forms.module').then((m) => m.FormsUIModule)
+    },
+    {
         path: '**',
         component: myEmptyPage
     }

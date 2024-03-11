@@ -1,0 +1,11 @@
+<div class="rate">
+    @if (options.text !== undefined) {
+        <p>{{options.text}}</p>
+    }
+
+    <div class="rate-wrapper">
+        @for (el of ratesArr; track el) {
+            <div class="rate-item" (click)="onRate(el)">{{el}}</div>
+        }
+    </div>
+</div>
