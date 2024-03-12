@@ -77,12 +77,12 @@ export class RateComponent implements ControlValueAccessor, OnInit {
     let cond = true;
     let count = 1;
     while (cond) {
-      this.ratesArr.push(count);
-      if (count === this.options.rates) {
+    this.ratesArr.push(count);
+    if (count === this.options.rates) {
         cond = false;
-      } else {
+    } else {
         count++;
-      }
+    }
     }
   }
 

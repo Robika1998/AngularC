@@ -64,11 +64,11 @@ export class FormsComponent implements OnInit {
     })
 
     public customForm = this._fb.group({
-        rate: [2]
+        rate: [4]
     })
 
     public ratesOptions: RateOptions = {
-        rates: 5,
+        rates: 10,
         text: 'Rate'
     }
 
